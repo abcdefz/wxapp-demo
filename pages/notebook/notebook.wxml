@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="addView">
+    <view class="inputView">
+      <input class="input" bindinput="bindKeyInput" placeholder="要做什么" />
+    </view>
+    <view class="addBtnView">
+      <button class="btn" bindtap="setInput">添加</button>
+    </view>
+  </view>
+  <view class="textBlock">
+    <block wx:for="{{testText}}" wx:key="idx">
+      <view class="blockView">
+        <text class="text">{{item.event}}</text>
+        <icon class="delete" type="cancel" size="15" bindtap="deleteIt" id="{{index}}" />
+      </view>
+    </block>
+  </view>
+
+</view>

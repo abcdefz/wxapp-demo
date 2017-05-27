@@ -1,0 +1,20 @@
+<view class="container">
+	<image class="user-avatar" src="/images/phaser.png"></image>
+	<text class="user-name">Hello, World!</text>
+	<view class="moto-container">
+		<text class="moto">开始小程序之旅</text>
+	</view>
+</view>
+
+<view class="container" style="align-items:left;">
+  <view class="pure-g main-items">
+    <scroll-view scroll-y="true">
+      <block wx:for="{{items}}" wx:for-item="item" wx:key="items">
+        <view class="item">
+          <text>{{index + 1}}. {{item.Title}}</text>
+          <icon class="delete" type="cancel" size="15" bindtap="deleteIt" id="{{index}}"/>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
