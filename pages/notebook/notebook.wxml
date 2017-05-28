@@ -8,12 +8,17 @@
     </view>
   </view>
   <view class="textBlock">
-    <block wx:for="{{testText}}" wx:key="idx">
-      <view class="blockView">
+    <block wx:for="{{items}}" wx:key="idx">
+      <!--<view class="blockView">
         <text class="text">{{item.event}}</text>
         <icon class="delete" type="cancel" size="15" bindtap="deleteIt" id="{{index}}" />
+      </view>-->
+
+      <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+        <view class="content">{{item.event}}</view>
+        <view class="del" catchtap="del" data-index="{{index}}">删除</view>
       </view>
+
     </block>
   </view>
-
 </view>

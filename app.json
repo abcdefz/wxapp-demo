@@ -1,6 +1,7 @@
 {
-  "pages":[
+  "pages": [
     "pages/notebook/notebook",
+    "pages/slide/slide",
     "pages/index/index"
   ]
 }
